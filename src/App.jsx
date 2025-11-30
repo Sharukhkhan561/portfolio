@@ -8,9 +8,14 @@ import Experience from './sections/Experience'
 import Footer from './sections/Footer'
 import ParticlesBackground from './components/ParticlesBackground'
 import CustomCursor  from './components/CustomCursor'
+import { useState } from "react"
+import IntroAnimation from "./components/IntroAnimation"
 function App() {
-
+  const [introDone, setIntroDone]= useState(false);
   return (
+    <>
+    {!introDone && <IntroAnimation onFinish={()=>setIntroDone(true)}/>}
+    {introDone && (
     <div className="relative gradient text-white">
     <CustomCursor/>
     {/* <ParticlesBackground/> */}
@@ -22,6 +27,8 @@ function App() {
       <Experience/>
       <Footer/> 
     </div>
+    )}
+    </>
   )
 }
 
