@@ -2,9 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='w-full h-screen'>
+    <section id='about' 
+    className='min-h-screen w-full items-center justify-center relative bg-black text-white overflow-hidden'>
       ABout
-    </div>
+    </section>
   )
 }
 
